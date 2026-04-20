@@ -17,11 +17,11 @@
 <p align="center"><strong>GG, PowerPoint.</strong></p>
 
 <p align="center">
-  <a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.es.md">Español</a> | <a href="README.de.md">Deutsch</a> | <a href="README.fr.md">Français</a> | <strong>Русский</strong>
+  <a href="../README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.es.md">Español</a> | <a href="README.de.md">Deutsch</a> | <a href="README.fr.md">Français</a> | <strong>Русский</strong>
 </p>
 
 <p align="center">
-  <img src="assets/comic.png" alt="Эволюция презентаций: от ручного создания PPT, к AI-генерируемым PPT, к AI-генерируемым интерактивным HTML" width="100%"/>
+  <img src="../assets/comic.png" alt="Эволюция презентаций: от ручного создания PPT, к AI-генерируемым PPT, к AI-генерируемым интерактивным HTML" width="100%"/>
 </p>
 
 > На дворе 2026 год. У вас есть AI, который пишет код за секунды. А вы всё ещё... перемещаете текстовые поля по слайдам?
@@ -51,7 +51,7 @@
 AI генерирует текст. Браузеры красиво отображают текст. Пропустите посредника.
 
 <p align="center">
-  <img src="assets/system-diagram.png" alt="Диаграмма системы: Вход (текст, таблицы, графики, логотип, URL сайта, .pptx) → AI (Claude, ChatGPT, Codex, Cursor) → HTML (один файл, нулевые зависимости) → Браузер (прокрутка, анимация, графики, взаимодействие)" width="100%"/>
+  <img src="../assets/system-diagram.png" alt="Диаграмма системы: Вход (текст, таблицы, графики, логотип, URL сайта, .pptx) → AI (Claude, ChatGPT, Codex, Cursor) → HTML (один файл, нулевые зависимости) → Браузер (прокрутка, анимация, графики, взаимодействие)" width="100%"/>
 </p>
 
 Вот и всё. Никаких `.pptx`. Никакого XML. Никакого PowerPoint. Никаких лицензионных сборов. Просто веб-страница.
@@ -66,11 +66,11 @@ AI генерирует текст. Браузеры красиво отобра
 
 ## Посмотрите в действии
 
-Откройте [`assets/example.html`](assets/example.html) в своём браузере. Это Q3 обзор бизнеса в стиле **stripe.com**, созданный из:
+Откройте [`assets/example.html`](../assets/example.html) в своём браузере. Это Q3 обзор бизнеса в стиле **stripe.com**, созданный из:
 
-- [`assets/sample-inputs/agenda.md`](assets/sample-inputs/agenda.md) — текстовый план
-- [`assets/sample-inputs/revenue_quarterly.csv`](assets/sample-inputs/revenue_quarterly.csv) — данные о доходах → автоматически созданные столбчатые графики + таблицы
-- [`assets/sample-inputs/customer_segments.csv`](assets/sample-inputs/customer_segments.csv) — данные о клиентах → кольцевая диаграмма + когорты удержания
+- [`assets/sample-inputs/agenda.md`](../assets/sample-inputs/agenda.md) — текстовый план
+- [`assets/sample-inputs/revenue_quarterly.csv`](../assets/sample-inputs/revenue_quarterly.csv) — данные о доходах → автоматически созданные столбчатые графики + таблицы
+- [`assets/sample-inputs/customer_segments.csv`](../assets/sample-inputs/customer_segments.csv) — данные о клиентах → кольцевая диаграмма + когорты удержания
 - `stripe.com` — URL сайта → цвета бренда, типография, тени и атмосфера автоматически извлечены
 
 Прокрутите это. Кликните на вкладки. Нажмите `N` для заметок докладчика. Нажмите `Ctrl+P` для просмотра печати в PDF.
@@ -115,11 +115,11 @@ AI генерирует текст. Браузеры красиво отобра
 
 ### Используйте с ChatGPT / Codex / Copilot / Cursor / Любым LLM
 
-Вставьте содержимое [`SKILL.md`](SKILL.md) как контекст (или приложите файл), затем введите:
+Вставьте содержимое [`SKILL.md`](../SKILL.md) как контекст (или приложите файл), затем введите:
 
 > "Прочитайте прикрепленный SKILL.md и руководство дизайна. Создайте HTML-презентацию о результатах нашего Q3. Вот логотип нашей компании."
 
-Или проще — просто вставьте [`references/design-guide.md`](references/design-guide.md) как контекст и скажите:
+Или проще — просто вставьте [`references/design-guide.md`](../references/design-guide.md) как контекст и скажите:
 
 > "Следуя этой системе дизайна, создайте одностраничную HTML-презентацию о [вашей теме]. Сделайте это как прокручиваемую веб-страницу, а не слайды."
 

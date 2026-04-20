@@ -17,11 +17,11 @@
 <p align="center"><strong>GG, PowerPoint.</strong></p>
 
 <p align="center">
-  <a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.es.md">Español</a> | <a href="README.de.md">Deutsch</a> | <strong>Français</strong> | <a href="README.ru.md">Русский</a>
+  <a href="../README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.es.md">Español</a> | <a href="README.de.md">Deutsch</a> | <strong>Français</strong> | <a href="README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <img src="assets/comic.png" alt="L'évolution des présentations : des diapositives manuelles, aux diapositives générées par l'IA, aux HTML interactifs générés par l'IA" width="100%"/>
+  <img src="../assets/comic.png" alt="L'évolution des présentations : des diapositives manuelles, aux diapositives générées par l'IA, aux HTML interactifs générés par l'IA" width="100%"/>
 </p>
 
 > On est en 2026. Vous avez une IA qui écrit du code en quelques secondes. Et vous êtes toujours... en train de faire glisser des boîtes de texte autour de diapositives ?
@@ -51,7 +51,7 @@ Pensez à ce qui se passe quand un LLM "génère un PowerPoint" :
 L'IA génère du texte. Les navigateurs affichent le texte magnifiquement. Sautez l'intermédiaire.
 
 <p align="center">
-  <img src="assets/system-diagram.png" alt="Diagramme système : Entrée (texte, tableaux, graphiques, logo, URL de site web, .pptx) → IA (Claude, ChatGPT, Codex, Cursor) → HTML (fichier unique, zéro dépendance) → Navigateur (défilement, animation, graphiques, interaction)" width="100%"/>
+  <img src="../assets/system-diagram.png" alt="Diagramme système : Entrée (texte, tableaux, graphiques, logo, URL de site web, .pptx) → IA (Claude, ChatGPT, Codex, Cursor) → HTML (fichier unique, zéro dépendance) → Navigateur (défilement, animation, graphiques, interaction)" width="100%"/>
 </p>
 
 C'est tout. Pas de `.pptx`. Pas de XML. Pas de PowerPoint. Pas de frais de licence. Juste une page web.
@@ -66,11 +66,11 @@ Votre public ne clique pas 47 fois sur "Diapositive suivante". Il défile. Il cl
 
 ## Voir cela en action
 
-Ouvrez [`assets/example.html`](assets/example.html) dans votre navigateur. C'est un examen trimestriel Q3 stylisé pour correspondre à **stripe.com**, généré à partir de :
+Ouvrez [`assets/example.html`](../assets/example.html) dans votre navigateur. C'est un examen trimestriel Q3 stylisé pour correspondre à **stripe.com**, généré à partir de :
 
-- [`assets/sample-inputs/agenda.md`](assets/sample-inputs/agenda.md) — un plan textuel
-- [`assets/sample-inputs/revenue_quarterly.csv`](assets/sample-inputs/revenue_quarterly.csv) — données de revenus → graphiques en barres auto-générés + tableaux
-- [`assets/sample-inputs/customer_segments.csv`](assets/sample-inputs/customer_segments.csv) — données clients → graphique en anneau + cohortes de rétention
+- [`assets/sample-inputs/agenda.md`](../assets/sample-inputs/agenda.md) — un plan textuel
+- [`assets/sample-inputs/revenue_quarterly.csv`](../assets/sample-inputs/revenue_quarterly.csv) — données de revenus → graphiques en barres auto-générés + tableaux
+- [`assets/sample-inputs/customer_segments.csv`](../assets/sample-inputs/customer_segments.csv) — données clients → graphique en anneau + cohortes de rétention
 - `stripe.com` — URL du site → couleurs de marque, typographie, ombres et ambiance extraites automatiquement
 
 Parcourez-le en défilant. Cliquez sur les onglets. Appuyez sur `N` pour les notes du présentateur. Appuyez sur `Ctrl+P` pour voir la mise en page d'impression PDF.
@@ -115,11 +115,11 @@ Demandez ensuite simplement à Claude de créer une présentation — la compét
 
 ### Utiliser avec ChatGPT / Codex / Copilot / Cursor / N'importe quel LLM
 
-Collez le contenu de [`SKILL.md`](SKILL.md) en tant que contexte (ou en pièce jointe), puis demandez :
+Collez le contenu de [`SKILL.md`](../SKILL.md) en tant que contexte (ou en pièce jointe), puis demandez :
 
 > "Lisez le SKILL.md et le guide de conception en pièce jointe. Créez une présentation HTML sur nos résultats Q3. Voici notre logo d'entreprise."
 
-Ou plus simplement — collez simplement [`references/design-guide.md`](references/design-guide.md) comme contexte et dites :
+Ou plus simplement — collez simplement [`references/design-guide.md`](../references/design-guide.md) comme contexte et dites :
 
 > "Suivez ce système de conception pour créer une présentation HTML à fichier unique sur [votre sujet]. Rendez-la comme une page web défilante, pas des diapositives."
 

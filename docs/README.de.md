@@ -17,11 +17,11 @@
 <p align="center"><strong>GG, PowerPoint.</strong></p>
 
 <p align="center">
-  <a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.es.md">Español</a> | <strong>Deutsch</strong> | <a href="README.fr.md">Français</a> | <a href="README.ru.md">Русский</a>
+  <a href="../README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.es.md">Español</a> | <strong>Deutsch</strong> | <a href="README.fr.md">Français</a> | <a href="README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <img src="assets/comic.png" alt="Die Evolution von Präsentationen: von manueller PowerPoint über KI-generierte PowerPoint bis zu KI-generiertem interaktivem HTML" width="100%"/>
+  <img src="../assets/comic.png" alt="Die Evolution von Präsentationen: von manueller PowerPoint über KI-generierte PowerPoint bis zu KI-generiertem interaktivem HTML" width="100%"/>
 </p>
 
 > Wir schreiben 2026. Die KI schreibt Code in Sekunden. Und du ziehst immer noch... Textfelder über Folien herum?
@@ -51,7 +51,7 @@ Denk darüber nach, was passiert, wenn ein LLM "eine PowerPoint generiert":
 KI generiert Text. Browser rendern Text wunderbar. Lass den Zwischenhändler weg.
 
 <p align="center">
-  <img src="assets/system-diagram.png" alt="Systemdiagramm: Input (Text, Tabellen, Diagramme, Logo, Website-URL, .pptx) → KI (Claude, ChatGPT, Codex, Cursor) → HTML (Einzeldatei, keine Abhängigkeiten) → Browser (Scrollen, Animationen, Diagramme, Interaktionen)" width="100%"/>
+  <img src="../assets/system-diagram.png" alt="Systemdiagramm: Input (Text, Tabellen, Diagramme, Logo, Website-URL, .pptx) → KI (Claude, ChatGPT, Codex, Cursor) → HTML (Einzeldatei, keine Abhängigkeiten) → Browser (Scrollen, Animationen, Diagramme, Interaktionen)" width="100%"/>
 </p>
 
 Das war's. Keine `.pptx`. Kein XML. Kein PowerPoint. Keine Lizenzgebühren. Nur eine Webseite.
@@ -66,11 +66,11 @@ Dein Publikum klickt nicht 47 Mal auf "Nächste Folie". Sie scrollen. Sie klicke
 
 ## Sieh es in Aktion
 
-Öffne [`assets/example.html`](assets/example.html) in deinem Browser. Es ist eine Q3-Geschäftsübersicht im Stripe-Stil, generiert aus:
+Öffne [`assets/example.html`](../assets/example.html) in deinem Browser. Es ist eine Q3-Geschäftsübersicht im Stripe-Stil, generiert aus:
 
-- [`assets/sample-inputs/agenda.md`](assets/sample-inputs/agenda.md) — eine Text-Gliederung
-- [`assets/sample-inputs/revenue_quarterly.csv`](assets/sample-inputs/revenue_quarterly.csv) — Umsatzdaten → automatisch generierte Balkendiagramme + Tabellen
-- [`assets/sample-inputs/customer_segments.csv`](assets/sample-inputs/customer_segments.csv) — Kundendaten → Donut-Diagramm + Retention-Kohorten
+- [`assets/sample-inputs/agenda.md`](../assets/sample-inputs/agenda.md) — eine Text-Gliederung
+- [`assets/sample-inputs/revenue_quarterly.csv`](../assets/sample-inputs/revenue_quarterly.csv) — Umsatzdaten → automatisch generierte Balkendiagramme + Tabellen
+- [`assets/sample-inputs/customer_segments.csv`](../assets/sample-inputs/customer_segments.csv) — Kundendaten → Donut-Diagramm + Retention-Kohorten
 - `stripe.com` — Website-URL → Markenfarben, Typographie, Schatten und Flair automatisch extrahiert
 
 Scroll durch. Klick auf die Tabs. Drücke `N` für Sprechnotizen. Drücke `Ctrl+P`, um das Druck-zu-PDF-Layout zu sehen.
@@ -115,11 +115,11 @@ Dann bitte Claude einfach, eine Präsentation zu machen — der Skill wird autom
 
 ### Verwendung mit ChatGPT / Codex / Copilot / Cursor / Jedem LLM
 
-Füge den Inhalt von [`SKILL.md`](SKILL.md) als Kontext ein (oder hänge es an), dann eingeben:
+Füge den Inhalt von [`SKILL.md`](../SKILL.md) als Kontext ein (oder hänge es an), dann eingeben:
 
 > "Lese die angehängte SKILL.md und das Design-Guide. Erstelle eine HTML-Präsentation über unsere Q3-Ergebnisse. Hier ist unser Firmenlogo."
 
-Oder einfacher — füge [`references/design-guide.md`](references/design-guide.md) als Kontext ein und sag:
+Oder einfacher — füge [`references/design-guide.md`](../references/design-guide.md) als Kontext ein und sag:
 
 > "Folge diesem Design-System, um eine Single-File HTML-Präsentation über [dein Thema] zu erstellen. Mach es zu einer scrollbaren Webseite, nicht zu Folien."
 

@@ -17,11 +17,11 @@
 <p align="center"><strong>GG, PowerPoint.</strong></p>
 
 <p align="center">
-  <a href="README.md">English</a> | <strong>简体中文</strong> | <a href="README.es.md">Español</a> | <a href="README.de.md">Deutsch</a> | <a href="README.fr.md">Français</a> | <a href="README.ru.md">Русский</a>
+  <a href="../README.md">English</a> | <strong>简体中文</strong> | <a href="README.es.md">Español</a> | <a href="README.de.md">Deutsch</a> | <a href="README.fr.md">Français</a> | <a href="README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <img src="assets/comic.png" alt="演示文稿的进化：从手动做PPT，到AI生成PPT，再到AI生成交互式HTML" width="100%"/>
+  <img src="../assets/comic.png" alt="演示文稿的进化：从手动做PPT，到AI生成PPT，再到AI生成交互式HTML" width="100%"/>
 </p>
 
 > 都2026年了，AI几秒钟就能写代码。你居然还在……拖文本框做PPT？
@@ -51,7 +51,7 @@
 AI生成文本。浏览器渲染文本。跳过中间人。
 
 <p align="center">
-  <img src="assets/system-diagram.png" alt="系统架构图：输入（文本、表格、图表、Logo、网站URL、.pptx）→ AI（Claude、ChatGPT、Codex、Cursor）→ HTML（单文件、零依赖）→ 浏览器（滚动、动画、图表、交互）" width="100%"/>
+  <img src="../assets/system-diagram.png" alt="系统架构图：输入（文本、表格、图表、Logo、网站URL、.pptx）→ AI（Claude、ChatGPT、Codex、Cursor）→ HTML（单文件、零依赖）→ 浏览器（滚动、动画、图表、交互）" width="100%"/>
 </p>
 
 就这样。不需要 `.pptx`，不需要XML，不需要PowerPoint，不需要授权费。只是一个网页。
@@ -66,11 +66,11 @@ AI生成文本。浏览器渲染文本。跳过中间人。
 
 ## 看看效果
 
-在浏览器中打开 [`assets/example.html`](assets/example.html)。这是一份模仿 **stripe.com** 风格的Q3季度回顾，由以下输入生成：
+在浏览器中打开 [`assets/example.html`](../assets/example.html)。这是一份模仿 **stripe.com** 风格的Q3季度回顾，由以下输入生成：
 
-- [`assets/sample-inputs/agenda.md`](assets/sample-inputs/agenda.md) —— 文字大纲
-- [`assets/sample-inputs/revenue_quarterly.csv`](assets/sample-inputs/revenue_quarterly.csv) —— 营收数据 → 自动生成柱状图 + 表格
-- [`assets/sample-inputs/customer_segments.csv`](assets/sample-inputs/customer_segments.csv) —— 客户数据 → 环形图 + 留存分析
+- [`assets/sample-inputs/agenda.md`](../assets/sample-inputs/agenda.md) —— 文字大纲
+- [`assets/sample-inputs/revenue_quarterly.csv`](../assets/sample-inputs/revenue_quarterly.csv) —— 营收数据 → 自动生成柱状图 + 表格
+- [`assets/sample-inputs/customer_segments.csv`](../assets/sample-inputs/customer_segments.csv) —— 客户数据 → 环形图 + 留存分析
 - `stripe.com` —— 网站URL → 自动提取品牌色、字体、阴影和设计风格
 
 滚动浏览，点击标签页，按 `N` 查看演讲备注，按 `Ctrl+P` 查看PDF打印布局。
@@ -115,11 +115,11 @@ AI生成文本。浏览器渲染文本。跳过中间人。
 
 ### 配合ChatGPT / Codex / Copilot / Cursor / 任何LLM使用
 
-将 [`SKILL.md`](SKILL.md) 的内容作为上下文粘贴（或附件上传），然后输入：
+将 [`SKILL.md`](../SKILL.md) 的内容作为上下文粘贴（或附件上传），然后输入：
 
 > "阅读附件中的SKILL.md和设计指南，为我们的Q3业绩创建一个HTML演示。这是我们公司的Logo。"
 
-更简单的方式 —— 直接粘贴 [`references/design-guide.md`](references/design-guide.md) 作为上下文，然后说：
+更简单的方式 —— 直接粘贴 [`references/design-guide.md`](../references/design-guide.md) 作为上下文，然后说：
 
 > "按照这个设计系统，为[你的主题]创建一个单文件HTML演示。做成滚动式网页，不要幻灯片。"
 
