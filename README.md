@@ -1,11 +1,14 @@
 # gg-ppt
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Claude Skill](https://img.shields.io/badge/Claude-Skill-blueviolet?logo=anthropic)](https://claude.ai)
 [![No PowerPoint](https://img.shields.io/badge/PowerPoint-Not%20Needed-red)](https://github.com/dgtql/gg-ppt)
 [![HTML Only](https://img.shields.io/badge/Output-Single%20.html-blue?logo=html5&logoColor=white)](https://github.com/dgtql/gg-ppt)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-brightgreen)](https://github.com/dgtql/gg-ppt)
 [![Works Offline](https://img.shields.io/badge/Offline-Ready-orange)](https://github.com/dgtql/gg-ppt)
+[![Claude](https://img.shields.io/badge/Claude-Supported-blueviolet?logo=anthropic)](https://claude.ai)
+[![ChatGPT](https://img.shields.io/badge/ChatGPT-Supported-74aa9c?logo=openai&logoColor=white)](https://chat.openai.com)
+[![Codex](https://img.shields.io/badge/Codex-Supported-74aa9c?logo=openai&logoColor=white)](https://openai.com/codex)
+[![Cursor](https://img.shields.io/badge/Cursor-Supported-000?logo=cursor&logoColor=white)](https://cursor.sh)
 
 **GG, PowerPoint.**
 
@@ -41,7 +44,7 @@ Prompt → AI → HTML → Browser
 
 That's it. No `.pptx`. No XML. No PowerPoint. No license fees. Just a webpage.
 
-**gg-ppt** is a [Claude](https://claude.ai) skill that generates beautiful, interactive HTML presentations. One prompt in, one `.html` file out. Open it in any browser, on any device, online or offline.
+**gg-ppt** is a prompt kit + design system that any AI can use to generate beautiful, interactive HTML presentations. Works with **Claude**, **ChatGPT**, **Codex**, **Cursor**, **Copilot**, or any LLM that can write code. One prompt in, one `.html` file out. Open it in any browser, on any device, online or offline.
 
 ### What "HTML presentation" actually means
 
@@ -87,7 +90,7 @@ Scroll through it. Click the tabs. Press `N` for speaker notes. Hit `Ctrl+P` to 
 
 ## Quick Start
 
-### 1. Install the Skill
+### Use with Claude (Skill)
 
 Copy the `gg-ppt` folder into your Claude skills directory:
 
@@ -95,23 +98,30 @@ Copy the `gg-ppt` folder into your Claude skills directory:
 ~/.claude/skills/gg-ppt/
 ```
 
-Or for project-level installation:
+Then just ask Claude to make a presentation — the skill triggers automatically.
 
+### Use with ChatGPT / Codex / Copilot / Cursor / Any LLM
+
+Paste the content of [`SKILL.md`](SKILL.md) as context (or attach it), then prompt:
+
+> "Read the attached SKILL.md and the design guide. Create an HTML presentation about our Q3 results. Here's our company logo."
+
+Or simpler — just paste the [`references/design-guide.md`](references/design-guide.md) as context and say:
+
+> "Follow this design system to create a single-file HTML presentation about [your topic]. Make it a scrolling webpage, not slides."
+
+The core idea works with **any LLM that can generate HTML**. The SKILL.md and design guide are just detailed instructions — any AI can follow them.
+
+### Use Standalone (No AI)
+
+The `scripts/extract_colors.py` tool works independently. Extract brand colors from any logo:
+
+```bash
+pip install Pillow
+python scripts/extract_colors.py your-logo.png --css
 ```
-your-project/.claude/skills/gg-ppt/
-```
 
-### 2. Use It
-
-Tell Claude to make a presentation:
-
-> "Create an HTML presentation about our Q3 results. Here's our company logo. Audience is the board of directors, tone should be confident but not aggressive."
-
-Or more casually:
-
-> "I need to present our new product roadmap to the team tomorrow. Can you make something that looks way better than a PowerPoint?"
-
-The skill triggers on keywords like *presentation*, *deck*, *slides*, *pitch*, *demo* — and even *PowerPoint* (it'll suggest HTML instead).
+Copy the CSS variables into your own HTML project.
 
 ### 3. Brand Theming
 
@@ -144,7 +154,7 @@ The skill supports natural back-and-forth. After the first version, just talk:
 - *"The numbers are wrong — use 92%, 4.2x, and $0"*
 - *"Make it more minimal — less color, more whitespace"*
 
-Claude reads the existing HTML and makes surgical edits. Sections you don't mention stay untouched. It's like talking to a designer who implements your feedback instantly.
+Your AI reads the existing HTML and makes surgical edits. Sections you don't mention stay untouched. It's like talking to a designer who implements your feedback instantly.
 
 ## What You Get
 
@@ -195,7 +205,7 @@ Those are solid tools, but they're still **slide frameworks** — they impose th
 
 ```
 gg-ppt/
-├── SKILL.md                          # Skill instructions for Claude
+├── SKILL.md                          # AI instructions (works with any LLM)
 ├── README.md                         # You are here
 ├── LICENSE                           # MIT
 ├── references/
@@ -216,7 +226,7 @@ PowerPoint was invented in 1987 to replace overhead projector transparencies. It
 
 In 2026, we have AI that generates structured, styled content in seconds. The browser is the most powerful rendering engine ever built. Every device on Earth has one.
 
-**gg-ppt** is a bet that presentations should just be web pages. Beautiful, interactive, branded web pages that you describe in plain text and AI builds for you.
+**gg-ppt** is a bet that presentations should just be web pages. Beautiful, interactive, branded web pages that you describe in plain text and any AI builds for you.
 
 GG, PowerPoint. Well played.
 
