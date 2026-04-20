@@ -19,6 +19,7 @@ HTML presentations can include live charts, smooth animations, click-to-reveal s
 |------|-----|
 | Create a presentation | Follow the [Creation Workflow](#creation-workflow) below |
 | Extract brand colors from a logo | `python scripts/extract_colors.py logo.png` |
+| Match a website's style | `python scripts/extract_style.py <url> --css` |
 | Design reference | Read [references/design-guide.md](references/design-guide.md) |
 
 ---
@@ -71,8 +72,26 @@ When converting from .pptx:
 5. Carry over speaker notes as `data-notes` attributes on the corresponding sections
 6. Apply brand theming: if the .pptx has a consistent color scheme, try to match it. If the user provides a logo, use that instead
 
+**Website Style Reference (URL):**
+- The user provides a website URL and wants the presentation to match that site's visual style
+- Example: "Make it look like stripe.com" or "Match the style of apple.com/iphone"
+
+When the user provides a URL for style matching:
+1. Run the style extraction script:
+   ```bash
+   pip install requests beautifulsoup4 --break-system-packages -q
+   python <skill-path>/scripts/extract_style.py <url> --json
+   ```
+2. This fetches the page's HTML + CSS and extracts: color palette, typography (font families), border-radius style, shadow usage, and overall design vibe (minimal, colorful, dark-mode, rounded, editorial, etc.)
+3. Use the extracted palette as your presentation's color system (same as using logo-extracted colors)
+4. Match the typography feel — if the site uses a specific font, use the closest system font equivalent. If it uses a serif for headings, use a serif. If it's monospace-heavy, incorporate that
+5. Match the shape language — if the site uses large border-radius (rounded), use rounded cards and buttons. If it's sharp/geometric, use square corners
+6. Match the vibe — if the site is minimal/flat, reduce shadows and decorative elements. If it's elevated/layered, use more shadows and depth
+
+The script outputs CSS custom properties ready to paste into the presentation's `:root` block. The hero gradient is automatically darkened for white-text safety.
+
 **Mixed Inputs:**
-Users often provide a combination — "here's our deck from last quarter, plus this new Excel with updated numbers, and our new logo." Handle each input type as described above and weave them together into a coherent presentation.
+Users often provide a combination — "here's our deck from last quarter, plus this new Excel with updated numbers, and our new logo." They may also say "style it like [website]". Handle each input type as described above and weave them together into a coherent presentation.
 
 #### What to Ask For
 

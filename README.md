@@ -1,4 +1,6 @@
-# gg-ppt
+<h1 align="center">GG-PPT</h1>
+
+<p align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![No PowerPoint](https://img.shields.io/badge/PowerPoint-Not%20Needed-red)](https://github.com/dgtql/gg-ppt)
@@ -10,7 +12,9 @@
 [![Codex](https://img.shields.io/badge/Codex-Supported-74aa9c?logo=openai&logoColor=white)](https://openai.com/codex)
 [![Cursor](https://img.shields.io/badge/Cursor-Supported-000?logo=cursor&logoColor=white)](https://cursor.sh)
 
-**GG, PowerPoint.**
+</p>
+
+<p align="center"><strong>GG, PowerPoint.</strong></p>
 
 <p align="center">
   <img src="assets/comic.png" alt="The Evolution of Presentations: from manual PPT, to AI-generated PPT, to AI-generated interactive HTML" width="100%"/>
@@ -42,9 +46,9 @@ Think about what happens when an LLM "generates a PowerPoint":
 
 AI generates text. Browsers render text beautifully. Skip the middleman.
 
-```
-Prompt → AI → HTML → Browser
-```
+<p align="center">
+  <img src="assets/system-diagram.png" alt="System diagram: Input (text, tables, plots, logo, website URL, .pptx) → AI (Claude, ChatGPT, Codex, Cursor) → HTML (single file, zero dependencies) → Browser (scroll, animate, charts, interact)" width="100%"/>
+</p>
 
 That's it. No `.pptx`. No XML. No PowerPoint. No license fees. Just a webpage.
 
@@ -58,12 +62,12 @@ Your audience doesn't click "Next Slide" 47 times. They scroll. They click tabs.
 
 ## See It In Action
 
-Open [`assets/example.html`](assets/example.html) in your browser. It's a Q3 business review for a fictional company, generated from:
+Open [`assets/example.html`](assets/example.html) in your browser. It's a Q3 business review styled to match **stripe.com**, generated from:
 
 - [`assets/sample-inputs/agenda.md`](assets/sample-inputs/agenda.md) — a text outline
 - [`assets/sample-inputs/revenue_quarterly.csv`](assets/sample-inputs/revenue_quarterly.csv) — revenue data → auto-generated bar charts + tables
 - [`assets/sample-inputs/customer_segments.csv`](assets/sample-inputs/customer_segments.csv) — customer data → donut chart + retention cohorts
-- A company logo → brand colors extracted automatically
+- `stripe.com` — website URL → brand colors, typography, shadows, and vibe extracted automatically
 
 Scroll through it. Click the tabs. Press `N` for speaker notes. Hit `Ctrl+P` to see the print-to-PDF layout.
 
@@ -72,7 +76,7 @@ Scroll through it. Click the tabs. Press `N` for speaker notes. Hit `Ctrl+P` to 
 | Why people use PPT | Why it no longer makes sense |
 |---|---|
 | "Everyone knows how to use it" | Everyone knows how to open a browser too |
-| "My company has templates" | AI extracts your brand colors from a logo and themes everything automatically |
+| "My company has templates" | Drop a logo or paste your website URL — AI extracts brand colors, fonts, and style automatically |
 | "I need charts and tables" | HTML has inline SVG charts, interactive tables, animated counters — all better than SmartArt |
 | "I need speaker notes" | Press `N`. Notes sync to your scroll position |
 | "I need to share it as a file" | It's one `.html` file. Email it. Slack it. USB it. 142KB |
@@ -90,7 +94,8 @@ Scroll through it. Click the tabs. Press `N` for speaker notes. Hit `Ctrl+P` to 
 | **Images or plots** | Embeds them as base64 so the file stays self-contained |
 | **Company logo** | Extracts brand colors and themes the entire presentation automatically |
 | **An existing .pptx** | Extracts text + images, restructures into a flowing HTML page (not a 1:1 slide copy) |
-| **Any combination** | "Here's last quarter's deck, updated numbers in this CSV, and our new logo" |
+| **A website URL** | "Make it look like stripe.com" — fetches the site's CSS, extracts colors, fonts, border-radius, shadows, and vibes, then themes your presentation to match |
+| **Any combination** | "Here's last quarter's deck, updated numbers in this CSV, and our new logo — style it like linear.app" |
 
 ## Quick Start
 
@@ -118,18 +123,27 @@ The core idea works with **any LLM that can generate HTML**. The SKILL.md and de
 
 ### Use Standalone (No AI)
 
-The `scripts/extract_colors.py` tool works independently. Extract brand colors from any logo:
+The scripts work independently:
 
+**Extract brand colors from a logo:**
 ```bash
 pip install Pillow
 python scripts/extract_colors.py your-logo.png --css
 ```
 
-Copy the CSS variables into your own HTML project.
+**Match a website's visual style:**
+```bash
+pip install requests beautifulsoup4
+python scripts/extract_style.py stripe.com --css
+```
 
-### 3. Brand Theming
+Both output CSS custom properties you can paste into any HTML project.
 
-Drop in a company logo and the skill extracts a 6-color palette:
+### Brand Theming
+
+Two ways to theme your presentation — both automatic:
+
+**From a logo** — drop in any image and the skill extracts a 6-color brand palette:
 
 ```bash
 python scripts/extract_colors.py your-logo.png --json
@@ -146,14 +160,30 @@ python scripts/extract_colors.py your-logo.png --json
 }
 ```
 
-These colors flow into every element — nav bars, headings, chart colors, hover states, gradients — making each presentation feel custom-designed.
+**From a website** — give it a URL and it extracts the site's entire visual language: colors, fonts, border-radius, shadows, and overall vibe:
 
-### 4. Iterate
+```bash
+python scripts/extract_style.py stripe.com --json
+```
+
+```json
+{
+  "palette": { "primary": "#533afd", "secondary": "#fb76fa", "accent": "#ff6118" },
+  "typography": { "heading_font": "sohne-var", "body_font": "SourceCodePro" },
+  "shape": { "border_radius": "12px", "shadow_style": "elevated" },
+  "vibe": ["colorful"]
+}
+```
+
+Colors flow into every element — nav bars, headings, chart colors, hover states, gradients. "Make my deck look like Stripe" → it just works.
+
+### Iterate
 
 The skill supports natural back-and-forth. After the first version, just talk:
 
 - *"Make the hero section more dramatic"*
 - *"Change the colors to match this new logo"*
+- *"Style it like linear.app"*
 - *"Add a timeline section between the stats and the comparison"*
 - *"The numbers are wrong — use 92%, 4.2x, and $0"*
 - *"Make it more minimal — less color, more whitespace"*
@@ -167,7 +197,8 @@ A single `.html` file with:
 | Feature | Detail |
 |---------|--------|
 | Scroll-triggered animations | Sections fade in as you scroll — smooth, not gimmicky |
-| Brand color theming | Auto-extracted from logos, or topic-matched palettes |
+| Brand color theming | Auto-extracted from logos, website URLs, or topic-matched palettes |
+| Website style matching | Give it a URL — extracts colors, fonts, shadows, border-radius, vibe |
 | Interactive SVG charts | Bar, donut, line charts — no Chart.js, no D3, no CDN |
 | Animated counters | Big numbers that count up when they scroll into view |
 | Tabbed content | Click to switch views within a section |
@@ -187,7 +218,7 @@ A single `.html` file with:
 | **Output** | Proprietary binary format | Single `.html` file |
 | **Interactivity** | Click "next slide" | Scroll, click tabs, hover charts, explore |
 | **Charts** | Static SmartArt | Animated SVG with real data labels |
-| **Branding** | Apply template, fix 47 things | Drop logo, colors auto-extracted |
+| **Branding** | Apply template, fix 47 things | Drop logo or paste a URL — colors, fonts, vibe auto-extracted |
 | **Editing** | Re-open, re-align, re-export | "Make the hero darker" → done |
 | **Sharing** | Need PowerPoint/Viewer installed | Any browser, any device, any OS |
 | **Cost** | $159/year (Microsoft 365) | $0 |
@@ -215,9 +246,12 @@ gg-ppt/
 ├── references/
 │   └── design-guide.md               # Full design system
 ├── scripts/
-│   └── extract_colors.py             # Logo → brand palette
+│   ├── extract_colors.py             # Logo → brand palette
+│   └── extract_style.py              # Website URL → style guide
 └── assets/
-    ├── example.html                   # Live demo — open in browser
+    ├── example.html                   # Live demo (Stripe-styled) — open in browser
+    ├── comic.png                      # Banner comic for README
+    ├── system-diagram.png             # Architecture diagram for README
     └── sample-inputs/                 # The inputs that generated the demo
         ├── agenda.md                  # Text outline
         ├── revenue_quarterly.csv      # Revenue data → charts

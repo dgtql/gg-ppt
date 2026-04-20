@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC"/>
+      <stop offset="100%" style="stop-color:#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="inputGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="htmlGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#D97706"/>
+    </linearGradient>
+    <linearGradient id="browserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="loopGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="50%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-opacity="0.1"/>
+    </filter>
+    <filter id="shadowSm" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="400" rx="16" fill="url(#bgGrad)"/>
+  <rect width="900" height="400" rx="16" fill="none" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- ========== INPUT COLUMN ========== -->
+  <rect x="32" y="40" width="200" height="260" rx="14" fill="#fff" filter="url(#shadow)" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="32" y="40" width="200" height="44" rx="14" fill="url(#inputGrad)"/>
+  <rect x="32" y="70" width="200" height="14" fill="url(#inputGrad)"/>
+  <text x="132" y="68" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#fff" letter-spacing="0.5">INPUT</text>
+
+  <!-- Required: Text -->
+  <rect x="50" y="100" width="164" height="36" rx="8" fill="#EEF2FF" filter="url(#shadowSm)"/>
+  <text x="76" y="123" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#4F46E5">Text / Outline</text>
+  <rect x="58" y="110" width="12" height="15" rx="2" fill="none" stroke="#4F46E5" stroke-width="1.5"/>
+  <line x1="61" y1="116" x2="67" y2="116" stroke="#4F46E5" stroke-width="1.2"/>
+  <line x1="61" y1="119" x2="65" y2="119" stroke="#4F46E5" stroke-width="1.2"/>
+
+  <!-- Optional label -->
+  <text x="132" y="155" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#94A3B8" letter-spacing="0.5">OPTIONAL</text>
+
+  <!-- Optional: CSV/Tables -->
+  <rect x="50" y="166" width="164" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="74" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#64748B">CSV / Tables</text>
+  <rect x="57" y="174" width="12" height="10" rx="1.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+  <line x1="57" y1="178" x2="69" y2="178" stroke="#94A3B8" stroke-width="1"/>
+  <line x1="63" y1="174" x2="63" y2="184" stroke="#94A3B8" stroke-width="1"/>
+
+  <!-- Optional: Images/Plots -->
+  <rect x="50" y="200" width="164" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="74" y="219" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#64748B">Images / Plots</text>
+  <rect x="57" y="208" width="12" height="10" rx="1.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+  <circle cx="61" cy="212" r="1.5" fill="#94A3B8"/>
+  <polyline points="57,217 61,214 65,216 69,213" fill="none" stroke="#94A3B8" stroke-width="1"/>
+
+  <!-- Optional: Logo -->
+  <rect x="50" y="234" width="164" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="74" y="253" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#64748B">Logo / Website URL</text>
+  <circle cx="63" cy="248" r="5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+  <circle cx="63" cy="246" r="1.2" fill="#94A3B8"/>
+  <circle cx="61" cy="249" r="1.2" fill="#94A3B8"/>
+  <circle cx="65" cy="249" r="1.2" fill="#94A3B8"/>
+
+  <!-- Optional: .pptx -->
+  <rect x="50" y="268" width="164" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="74" y="287" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#64748B">Existing .pptx</text>
+  <rect x="57" y="276" width="12" height="10" rx="1.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="63" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#94A3B8">P</text>
+
+  <!-- ========== ARROW 1: Input -> AI ========== -->
+  <line x1="244" y1="170" x2="310" y2="170" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="310,164 322,170 310,176" fill="#CBD5E1"/>
+
+  <!-- ========== AI BOX ========== -->
+  <rect x="330" y="100" width="160" height="140" rx="14" fill="#fff" filter="url(#shadow)" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="330" y="100" width="160" height="44" rx="14" fill="url(#aiGrad)"/>
+  <rect x="330" y="130" width="160" height="14" fill="url(#aiGrad)"/>
+  <text x="410" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#fff" letter-spacing="0.5">AI</text>
+
+  <text x="352" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#7C3AED">Claude</text>
+  <text x="352" y="183" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#7C3AED">ChatGPT</text>
+  <text x="352" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#7C3AED">Codex</text>
+  <text x="352" y="217" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#7C3AED">Cursor / Any LLM</text>
+  <circle cx="346" cy="163" r="2.5" fill="#C4B5FD"/>
+  <circle cx="346" cy="180" r="2.5" fill="#C4B5FD"/>
+  <circle cx="346" cy="197" r="2.5" fill="#C4B5FD"/>
+  <circle cx="346" cy="214" r="2.5" fill="#C4B5FD"/>
+
+  <!-- ========== ARROW 2: AI -> HTML ========== -->
+  <line x1="502" y1="170" x2="568" y2="170" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="568,164 580,170 568,176" fill="#CBD5E1"/>
+
+  <!-- ========== HTML BOX ========== -->
+  <rect x="588" y="100" width="120" height="140" rx="14" fill="#fff" filter="url(#shadow)" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="588" y="100" width="120" height="44" rx="14" fill="url(#htmlGrad)"/>
+  <rect x="588" y="130" width="120" height="14" fill="url(#htmlGrad)"/>
+  <text x="648" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#fff" letter-spacing="0.5">HTML</text>
+
+  <text x="604" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#92400E">Single .html file</text>
+  <text x="604" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#92400E">Zero dependencies</text>
+  <text x="604" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#92400E">Works offline</text>
+  <text x="604" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#92400E">~150 KB</text>
+  <text x="598" y="165" font-family="system-ui, sans-serif" font-size="9" fill="#D97706">&#x2713;</text>
+  <text x="598" y="181" font-family="system-ui, sans-serif" font-size="9" fill="#D97706">&#x2713;</text>
+  <text x="598" y="197" font-family="system-ui, sans-serif" font-size="9" fill="#D97706">&#x2713;</text>
+  <text x="598" y="213" font-family="system-ui, sans-serif" font-size="9" fill="#D97706">&#x2713;</text>
+
+  <!-- ========== ARROW 3: HTML -> Browser ========== -->
+  <line x1="720" y1="170" x2="756" y2="170" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="756,164 768,170 756,176" fill="#CBD5E1"/>
+
+  <!-- ========== BROWSER BOX ========== -->
+  <rect x="776" y="70" width="100" height="200" rx="14" fill="#fff" filter="url(#shadow)" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="776" y="70" width="100" height="44" rx="14" fill="url(#browserGrad)"/>
+  <rect x="776" y="100" width="100" height="14" fill="url(#browserGrad)"/>
+
+  <!-- Browser icon -->
+  <rect x="806" y="80" width="20" height="16" rx="3" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <line x1="806" y1="86" x2="826" y2="86" stroke="#fff" stroke-width="1"/>
+  <circle cx="810" cy="83.5" r="1" fill="#fff"/>
+  <circle cx="814" cy="83.5" r="1" fill="#fff"/>
+  <circle cx="818" cy="83.5" r="1" fill="#fff"/>
+
+  <text x="826" y="106" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fff" letter-spacing="0.3">Browser</text>
+
+  <text x="826" y="136" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#059669">Scroll</text>
+  <text x="826" y="154" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#059669">Animate</text>
+  <text x="826" y="172" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#059669">Charts</text>
+  <text x="826" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#059669">Interact</text>
+  <text x="826" y="208" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#059669">Responsive</text>
+  <text x="826" y="226" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#059669">Print to PDF</text>
+
+  <line x1="800" y1="143" x2="852" y2="143" stroke="#D1FAE5" stroke-width="0.5"/>
+  <line x1="800" y1="161" x2="852" y2="161" stroke="#D1FAE5" stroke-width="0.5"/>
+  <line x1="800" y1="179" x2="852" y2="179" stroke="#D1FAE5" stroke-width="0.5"/>
+  <line x1="800" y1="197" x2="852" y2="197" stroke="#D1FAE5" stroke-width="0.5"/>
+  <line x1="800" y1="215" x2="852" y2="215" stroke="#D1FAE5" stroke-width="0.5"/>
+
+  <!-- ========== FEEDBACK LOOP ========== -->
+  <!-- Curved arrow from Browser bottom back to AI bottom -->
+  <path d="M 826 275 L 826 330 Q 826 350 806 350 L 430 350 Q 410 350 410 330 L 410 245"
+    fill="none" stroke="url(#loopGrad)" stroke-width="2" stroke-dasharray="6 3" stroke-linecap="round"/>
+  <!-- Arrowhead pointing up into AI box -->
+  <polygon points="404,248 410,236 416,248" fill="#8B5CF6"/>
+
+  <!-- Feedback loop label -->
+  <rect x="490" y="337" width="170" height="26" rx="13" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="575" y="354" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#7C3AED">ITERATE</text>
+
+  <!-- Example feedback prompts along the loop -->
+  <text x="700" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-style="italic" fill="#A78BFA">"Make the hero darker"</text>
+  <text x="432" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-style="italic" fill="#A78BFA">"Add a chart"</text>
+
+  <!-- ========== BOTTOM TAGLINE ========== -->
+  <text x="450" y="388" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" letter-spacing="0.3">No PowerPoint. No frameworks. No dependencies. Just a webpage you keep refining.</text>
+
+</svg>
