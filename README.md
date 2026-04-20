@@ -13,7 +13,7 @@
 **GG, PowerPoint.**
 
 <p align="center">
-  <img src="assets/comic.svg" alt="The Evolution of Presentations: from manual PPT, to AI-generated PPT, to AI-generated interactive HTML" width="100%"/>
+  <img src="assets/comic.png" alt="The Evolution of Presentations: from manual PPT, to AI-generated PPT, to AI-generated interactive HTML" width="100%"/>
 </p>
 
 > You're in 2026. You have AI that writes code in seconds. And you're still... dragging text boxes around slides?
