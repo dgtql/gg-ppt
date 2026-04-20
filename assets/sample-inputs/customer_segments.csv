@@ -1,0 +1,5 @@
+segment,customers,arr_millions,pct_total,nrr,month1_retention,month3_retention,month6_retention,month12_retention
+Enterprise,142,30.4,58%,128%,100%,99%,97%,95%
+Mid-Market,285,13.6,26%,108%,100%,96%,91%,85%
+SMB,380,6.3,12%,89%,100%,88%,74%,61%
+Services,40,2.1,4%,,,,
