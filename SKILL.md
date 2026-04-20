@@ -276,6 +276,12 @@ The goal is a collaborative, conversational loop. The user describes what they w
 
 ---
 
+## Language
+
+**Always match the user's language.** If the user prompts in Chinese, all presentation content (titles, headings, body text, chart labels, speaker notes, nav links) should be in Chinese. If they prompt in Spanish, write in Spanish. The HTML structure, CSS, and JavaScript remain the same regardless of language — only the visible text content changes. The `<html lang="">` attribute should also match (e.g., `zh` for Chinese, `es` for Spanish, `fr` for French).
+
+---
+
 ## Design Principles
 
 The full design system is in [references/design-guide.md](references/design-guide.md). Key principles:
