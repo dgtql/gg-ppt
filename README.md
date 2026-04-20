@@ -17,6 +17,10 @@
 <p align="center"><strong>GG, PowerPoint.</strong></p>
 
 <p align="center">
+  <strong>English</strong> | <a href="README.zh-CN.md">简体中文</a>
+</p>
+
+<p align="center">
   <img src="assets/comic.png" alt="The Evolution of Presentations: from manual PPT, to AI-generated PPT, to AI-generated interactive HTML" width="100%"/>
 </p>
 
